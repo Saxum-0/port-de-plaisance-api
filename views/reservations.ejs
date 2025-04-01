@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservations</title>
+</head>
+<body>
+    <h1>Liste des Réservations</h1>
+
+    <form action="/api/catways/:id/reservations" method="POST">
+        <label for="clientName">Nom du client :</label>
+        <input type="text" id="clientName" name="clientName" required>
+
+        <label for="boatName">Nom du bateau :</label>
+        <input type="text" id="boatName" name="boatName" required>
+
+        <label for="checkIn">Date de début :</label>
+        <input type="date" id="checkIn" name="checkIn" required>
+
+        <label for="checkOut">Date de fin :</label>
+        <input type="date" id="checkOut" name="checkOut" required>
+
+        <button type="submit">Réserver</button>
+    </form>
+
+    <h2>Réservations existantes</h2>
+    <ul>
+        <% reservations.forEach(reservation => { %>
+            <li><%= reservation.clientName %> - <%= reservation.boatName %> - <%= reservation.checkIn %> → <%= reservation.checkOut %></li>
+        <% }) %>
+    </ul>
+
+    <a href="/dashboard">Retour au tableau de bord</a>
+</body>
+</html>

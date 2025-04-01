@@ -1,0 +1,13 @@
+<h1>Liste des Catways</h1>
+<ul>
+    <% if (catways && catways.length > 0) { %>
+        <% catways.forEach(catway => { %>
+            <li><%= catway.catwayNumber %> - <%= catway.type %> - <%= catway.catwayState %></li>
+        <% }) %>
+    <% } else { %>
+        <p>Aucun catway disponible.</p>
+    <% } %>
+</ul>
+
+<a href="/dashboard">Retour</a>
+

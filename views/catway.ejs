@@ -1,0 +1,13 @@
+<h1>Détails du Catway</h1>
+
+<% if (catway) { %>
+  <ul>
+    <li><strong>Numéro :</strong> <%= catway.catwayNumber %></li>
+    <li><strong>Type :</strong> <%= catway.type %></li>
+    <li><strong>État :</strong> <%= catway.catwayState %></li>
+  </ul>
+<% } else { %>
+  <p>Catway introuvable</p>
+<% } %>
+
+<a href="/catways">⬅ Retour à la liste</a>

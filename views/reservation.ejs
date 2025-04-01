@@ -1,0 +1,22 @@
+<h1>Détails de la Réservation</h1>
+
+<p><strong>ID :</strong> <%= reservation._id %></p>
+<p><strong>Nom du client :</strong> <%= reservation.clientName %></p>
+<p><strong>Nom du bateau :</strong> <%= reservation.boatName %></p>
+<p><strong>Dates :</strong> 
+  <%= reservation.checkIn ? reservation.checkIn.toDateString() : "Non défini" %> → 
+  <%= reservation.checkOut ? reservation.checkOut.toDateString() : "Non défini" %>
+</p>
+
+
+
+<% if (catway) { %>
+  <h3>Infos Catway</h3>
+  <p><strong>Numéro :</strong> <%= catway.catwayNumber %></p>
+  <p><strong>Type :</strong> <%= catway.type %></p>
+  <p><strong>État :</strong> <%= catway.catwayState %></p>
+<% } else { %>
+  <p>Catway non trouvé.</p>
+<% } %>
+
+<a href="/reservations">⬅ Retour à la liste</a>
