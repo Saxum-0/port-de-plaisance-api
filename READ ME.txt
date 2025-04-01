@@ -2,8 +2,8 @@ email": "pierrebis@mail.com",
 password":"pierre"
 
 
-les collections catways et reservations fournies avec le TP etait introuvable donc j'ai créé
-
+les collections catways et reservations fournies avec le TP etaient introuvable donc j'ai créé
+Heroku est payant donc merci de compter les points 
 
 Conception de l’API du Port de Plaisance
 
