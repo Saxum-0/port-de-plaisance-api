@@ -1,0 +1,35 @@
+email": "pierrebis@mail.com",
+password":"pierre"
+
+
+
+
+
+Conception de l’API du Port de Plaisance
+
+
+La conception de l’API pour le port de plaisance de Russell a suivi plusieurs étapes clés afin de garantir une structure propre, fonctionnelle et évolutive.
+
+1. Initialisation du projet
+Le projet a démarré avec la mise en place d’un serveur Express.js, connecté à une base de données MongoDB. Les modèles principaux (utilisateurs, catways et réservations) ont été définis avec Mongoose, en respectant la structure attendue : chaque ressource étant dotée de ses attributs et relations.
+
+2. Implémentation des routes REST
+Les routes REST ont été organisées autour des ressources principales :
+
+/catways pour la gestion des appontements
+/reservations pour les réservations liées à un catway
+/users pour la gestion des utilisateurs de la capitainerie
+/auth pour les opérations de connexion/inscription avec un système de JWT
+Chaque action (création, modification, suppression, récupération) a été pensée selon les conventions REST avec les méthodes HTTP adaptées (GET, POST, PUT, DELETE, PATCH).
+
+3. Authentification et sécurisation
+Un système d’authentification a été mis en place avec bcrypt pour le hachage des mots de passe et jsonwebtoken pour sécuriser les échanges. Une route protégée permet à un utilisateur connecté de récupérer ses informations.
+
+4. Création de l’interface frontend
+Une interface simple a été développée avec EJS côté serveur, pour permettre à l’utilisateur d’interagir avec l’API via des formulaires. Un tableau de bord permet de gérer les utilisateurs, catways et réservations de manière intuitive.
+
+5. Tests et validation via Insomnia
+Chaque route a été testée manuellement dans Insomnia, en effectuant des requêtes avec des jeux de données variés. Les statuts de réponses (200, 201, 400, 404, etc.) ont été vérifiés pour garantir le bon fonctionnement de chaque action.
+
+6. Déploiement
+L’application a été déployée sur Heroku, rendant l’API accessible en ligne. La base de données MongoDB est hébergée sur MongoDB Atlas, assurant une disponibilité constante.
