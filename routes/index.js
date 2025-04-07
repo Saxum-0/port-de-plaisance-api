@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const Catway = require("../models/catway");
-const Reservation = require("../models/reservation");
-const User = require("../models/user");
+const Catway = require("../models/Catway");
+const Reservation = require("../models/Reservation");
+const User = require("../models/User");
 
 router.use(express.urlencoded({ extended: true }));
 
