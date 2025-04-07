@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const userController = require('../controllers/userController');
-const catwayController = require('../controllers/catwayController');
-const reservationController = require('../controllers/reservationController');
+const userController = require('../controllers/usercontroller');
+const catwayController = require('../controllers/catwaycontroller');
+const reservationController = require('../controllers/reservationcontroller');
 
 // Routes pour les utilisateurs
 router.post('/users', userController.createUser);
