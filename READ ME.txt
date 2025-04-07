@@ -1,6 +1,9 @@
+
+
 email": "pierrebis@mail.com",
 password":"pierre"
 
+https://capitainerie-27a6fcf90b8b.herokuapp.com
 
 les collections catways et reservations fournies avec le TP etaient introuvable donc j'ai créé
 Heroku est payant donc merci de compter les points 
@@ -32,4 +35,4 @@ Une interface simple a été développée avec EJS côté serveur, pour permettr
 Chaque route a été testée manuellement dans Insomnia, en effectuant des requêtes avec des jeux de données variés. Les statuts de réponses (200, 201, 400, 404, etc.) ont été vérifiés pour garantir le bon fonctionnement de chaque action.
 
 6. Déploiement
-L’application devait etre déployée avec Heroku, rendant l’API accessible en ligne. La base de données MongoDB est hébergée sur MongoDB Atlas, assurant une disponibilité constante, mais c'est payant. 
+Deploiement sur Heroku, et correctif de quelques erreurs pour que le serveur se lance suite multiple erreur 503. La cause était des routes mal ecrites que mac passe outre mais pas linux.
